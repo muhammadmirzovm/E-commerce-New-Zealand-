@@ -37,7 +37,7 @@
       </ul>
         <div class="d-flex align-items-center gap-3">
            {% if request.user.is_authenticated %}
-               <span style="width: 30px; height:30px" class="d-inline-block text-white bg-dark rounded rounded-circle d-flex align-items-center justify-content-center">{{ request.user.username | slice:1 | title }}</span>
+               <a href="{% url 'profile' %}"><span style="width: 30px; height:30px" class="d-inline-block text-white bg-dark rounded rounded-circle d-flex align-items-center justify-content-center">{{ request.user.username | slice:1 | title }}</span></a>
 
                <form method="post" action="{% url 'logout' %}">
                    {% csrf_token %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Edit profile{% endblock %}
+{% block content %}
+<div class="container border rounded bg-light my-5 p-3">
+   <h1>Profilni tahrirlash</h1>
+   <form method="post" enctype="multipart/form-data">
+       {% csrf_token %}
+       {{ form.as_p }}
+       <button class="btn btn-secondary" type="submit">Saqlash</button>
+       <a class="btn btn-outline-secondary" href="{% url 'profile' %}">Bekor qilish</a>
+   </form>
+</div>
+{% endblock %}
+
