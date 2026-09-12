@@ -34,7 +34,7 @@ class CustomLoginView(LoginView):
 
 
 class CustomLogoutView(LogoutView):
-   next_page = "home"
+   next_page = "product_list"
    def dispatch(self, request):
        messages.info(request, "Tizimdan chiqdingiz 👋")
        return super().dispatch(request)
