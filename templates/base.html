@@ -16,7 +16,10 @@
   <body>
     {% include "includes/navbar.html" %}
     <!--  -->
-    {% block content %}{% endblock content %}
+    <div class="container border rounded bg-light p-3 my-5">
+
+      {% block content %}{% endblock content %}
+    </div>
     <!--  -->
     {% if messages %}
     <!--  -->
