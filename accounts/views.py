@@ -11,7 +11,7 @@ from .models import User
 class SignUpView(CreateView):
    form_class = SignUpForm
    template_name = "accounts/signup.html"
-   success_url = reverse_lazy("home")
+   success_url = reverse_lazy("product_list")
    def form_valid(self, form):
        response = super().form_valid(form)   # user bazaga saqlanadi
        login(self.request, self.object)      #tizimga avtomatik kirib qo’yadi

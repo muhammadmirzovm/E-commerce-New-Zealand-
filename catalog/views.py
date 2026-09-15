@@ -22,7 +22,6 @@ class ProductListView(ListView):
                Q(name__icontains=q) |
                Q(short_description__icontains=q) |
                Q(description__icontains=q))
-      
        cat_slug = self.request.GET.get("category", "").strip()
        if cat_slug:
            cat = Category.objects.filter(slug=cat_slug).first()

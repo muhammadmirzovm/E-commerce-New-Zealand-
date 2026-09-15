@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'catalog',
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'cart'
 ]
 
 MIDDLEWARE = [
@@ -136,3 +139,4 @@ DEFAULT_FROM_EMAIL = "noreply@marketplace.local"
 AUTH_USER_MODEL = "accounts.User"
 LOGIN_REDIRECT_URL = "product_list"
 
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
